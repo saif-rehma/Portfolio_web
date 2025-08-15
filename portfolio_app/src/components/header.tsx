@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/navBar";
 
 import React, { useState } from "react";
+import { ModeToggle } from "./toggle";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,12 +31,15 @@ export default function Header() {
           <NavbarLogo />
 
           {/* Desktop Links */}
-          <div className="hidden lg:flex">
+          <div className="hidden md:flex">
             <NavItems items={navLinks} />
-          </div>
+          <div className="ml-4 z-50">
+           <ModeToggle />
+            </div>
+            </div>
 
           {/* Mobile Toggle */}
-          <div className="flex lg:hidden">
+          <div className="flex md:hidden">
             <MobileNavToggle
               isOpen={isOpen}
               onClick={() => setIsOpen(!isOpen)}
@@ -45,7 +49,7 @@ export default function Header() {
       </Navbar>
 
       {/* Mobile Menu */}
-      <MobileNav visible={isOpen} className="lg:hidden">
+      <MobileNav visible={isOpen} className="md:hidden">
         <MobileNavHeader>
           <NavbarLogo />
         </MobileNavHeader>
