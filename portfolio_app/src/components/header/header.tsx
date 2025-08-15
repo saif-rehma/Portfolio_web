@@ -1,53 +1,59 @@
-"use client"
-import { Navbar, NavBody, NavbarLogo, NavItems, NavbarButton, MobileNav, MobileNavToggle, MobileNavMenu, MobileNavHeader } from "@/components/ui/navBar"
-import Link from "next/link";
+"use client";
 
-export default function Header()
-{
-    const navLinks = [
+import {
+  Navbar,
+  NavBody,
+  NavbarLogo,
+  NavItems,
+  MobileNav,
+  MobileNavToggle,
+  MobileNavMenu,
+  MobileNavHeader,
+} from "@/components/ui/navBar";
+
+import React, { useState } from "react";
+
+export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
     { name: "Home", link: "/" },
-    { name: "Projects", link: "/project" },
+    { name: "Projects", link: "/projects" },
     { name: "Contact", link: "/contact" },
   ];
-   
-    return (
-        <>
-        <div>
-              <Navbar>
-              <NavBody>
-                <NavbarLogo />
-                  {/* Desktop Navigation */}
-                  <div className="hidden md:flex">
-                  <NavItems items={navLinks} />
-                  {/* <NavbarButton href="/signup">Sign Up</NavbarButton> */}
-                  </div>
 
-                
-                  {/* Mobile Menu Toggle */}
-                   <div className="flex md:hidden">
-                <MobileNavToggle
-              isOpen={true}
-              onClick={() => setIsOpen(true)}
+  return (
+    <>
+      {/* Navbar */}
+      <Navbar>
+        <NavBody>
+          <NavbarLogo />
+
+          {/* Desktop Links */}
+          <div className="hidden lg:flex">
+            <NavItems items={navLinks} />
+          </div>
+
+          {/* Mobile Toggle */}
+          <div className="flex lg:hidden">
+            <MobileNavToggle
+              isOpen={isOpen}
+              onClick={() => setIsOpen(!isOpen)}
             />
           </div>
-              </NavBody>
-              </Navbar>
-              {/* Mobile Menu */}
-      <MobileNav visible={true}>
+        </NavBody>
+      </Navbar>
+
+      {/* Mobile Menu */}
+      <MobileNav visible={isOpen} className="lg:hidden">
         <MobileNavHeader>
           <NavbarLogo />
         </MobileNavHeader>
-        <MobileNavMenu isOpen={true} onClose={() => setIsOpen(false)}>
-          <NavItems
-            items={[
-              { name: "Home", link: "/" },
-              { name: "Projects", link: "/projects" },
-              { name: "Contact", link: "/contact" },
-            ]}
-          />
+        <MobileNavMenu isOpen={isOpen} onClose={() => setIsOpen(false)}>
+          <NavItems items={navLinks} onItemClick={() => setIsOpen(false)} />
         </MobileNavMenu>
       </MobileNav>
-                  </div>
-        </>
-      );
+    </>
+  );
 }
+//  Let's create main menu . Look after you tomorrow 
