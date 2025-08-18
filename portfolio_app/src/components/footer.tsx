@@ -3,62 +3,40 @@
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { NavbarLogo } from "@/components/ui/navBar";
-import { useState } from "react";
+import { HoverCardFunc } from "./hover_card";
 
 
 export default function Footer()
 {
-    const [ showDialog,setShowDialog ] = useState(false)
+  
     return(
-
+    //  Footer Function
      <>
      <div className="flex flex-col mt-5 items-center p-2 ">
-        <p>Saif ur Rehman © 2024</p>
-        {/* Logo here */}
-        <div 
-        className="m-2 relative flex-row justify-center gap-3  inline-block"
-        onMouseEnter={()=> setShowDialog(true)}
-        onMouseLeave={()=> setShowDialog(false)}
-
-        >
-        <div 
-        className="cursor-pointer"
-        onClick={()=> window.scrollTo({top : 0 , behavior : "smooth"})}
-        >
-
-        <NavbarLogo  />
-        {/* Alert dialog style */}
-        {showDialog && (
-  <span className="
-    absolute
-    left-1/2
-    -translate-x-1/2
-    top-full
-    mt-2
-    bg-gray-900
-    text-white
-    p-2
-    rounded-lg
-    shadow-lg
-    z-10
-    whitespace-nowrap
-  ">
-    To Top
-  </span>
-)}
-        </div>
+      <div>
+      {/* Copyright */}
+        <p className=" ">Saif ur Rehman © 2024</p>
+      </div>
+        
+        {/* Logo wrapped and cool animator : To Top */}
+        
+       <div
+        className="m-2 cursor-pointer"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <HoverCardFunc />
+      </div>
+        
         </div>
         
+        {/* Socials Link */}
         
-        <div className="flex gap-6 p-2  ">
-            <FaGithub />
-            <FaLinkedin />
-            <MdOutlineEmail />
+        <div className="flex gap-4  mt-0 justify-center  ">
+            <FaGithub className="cursor-pointer text-xl "/>
+            <FaLinkedin className="cursor-pointer text-xl " />
+            <MdOutlineEmail className="cursor-pointer text-xl " />
         </div>
-     </div>
+     
      </>
     )
 }
-
-//  Let's complete the footer tomorrow 
