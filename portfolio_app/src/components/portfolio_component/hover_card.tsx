@@ -11,7 +11,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
-import { NavbarLogo } from "./ui/navBar"
+import { NavbarLogo } from "../ui/navBar"
 import { link } from "fs"
 
 export function HoverCardFunc() {

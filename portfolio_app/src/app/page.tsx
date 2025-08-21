@@ -1,6 +1,6 @@
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import { ModeToggle } from "@/components/toggle";
+import Footer from "@/components/portfolio_component/footer";
+import Header from "@/components/portfolio_component/header";
+import { ModeToggle } from "@/components/portfolio_component/toggle";
 import { Navbar, NavBody, NavbarLogo, NavItems, NavbarButton } from "@/components/ui/navBar";
 import Image from "next/image";
 
@@ -14,9 +14,10 @@ export default function Home() {
       </div>
       <main>
         {/* Main content here */}
+
       </main>
       <div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
       
       
