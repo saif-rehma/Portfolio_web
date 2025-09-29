@@ -3,7 +3,7 @@
 import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { HoverCardFunc } from "./hover_card";
+import { HoverCardFunc } from "../ui/hover_card";
 
 
 export default function Footer()
