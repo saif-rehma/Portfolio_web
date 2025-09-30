@@ -53,6 +53,20 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme_provider"
 
 
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Maheera Rehman",
+  description: "Python & Agentic AI Developer",
+};
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

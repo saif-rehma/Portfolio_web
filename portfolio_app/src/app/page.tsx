@@ -4,6 +4,7 @@ import HeroSection from "@/components/main_component/hero_section";
 import { ModeToggle } from "@/components/ui/toggle";
 import { Navbar, NavBody, NavbarLogo, NavItems, NavbarButton } from "@/components/ui/navBar";
 import Image from "next/image";
+import Projects from "@/components/main_component/projects";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         {/* Main content here */}
         <HeroSection />
+        <Projects />
       </main>
       <div>
         {/* <Footer /> */}
