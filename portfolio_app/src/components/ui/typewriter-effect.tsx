@@ -1,3 +1,5 @@
+//  Typewriter effect for hero section 
+
 "use client";
 
 import { cn } from "@/lib/utils";

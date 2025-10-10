@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from "react";
 
+
+//  The main file and hero section of the portfolio website
 export default function HeroSection() {
   const words = [
     "Frontend Developer",
@@ -98,3 +100,6 @@ export default function HeroSection() {
     </section>
   );
 }
+
+
+// Hero Section 

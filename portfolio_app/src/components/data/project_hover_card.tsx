@@ -1,5 +1,5 @@
 // ✅ Fix: import HoverEffect as default, not named
-import HoverEffect from "@/components/ui/card-hover-effect";
+import HoverEffect from "@/components/ui/project_card_hover";
 
 export function CardHoverEffect() {
   return (

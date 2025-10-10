@@ -1,3 +1,5 @@
+// footer lopgo to move to top
+
 import { CalendarIcon } from "lucide-react"
 
 import {
@@ -10,7 +12,7 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card"
+} from "@/components/ui/hover-card_ui"
 import { NavbarLogo } from "./navBar"
 import { link } from "fs"
 

@@ -1,4 +1,4 @@
-
+// Logo of the portfolio in header
 import Link from "next/link";
 
 export  default function Logo() {

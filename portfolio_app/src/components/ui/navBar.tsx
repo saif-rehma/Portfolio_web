@@ -1,3 +1,5 @@
+// Nav bar of the portfolio
+
 "use client";
 import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";

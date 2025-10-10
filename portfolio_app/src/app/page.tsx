@@ -5,7 +5,8 @@ import { ModeToggle } from "@/components/ui/toggle";
 import { Navbar, NavBody, NavbarLogo, NavItems, NavbarButton } from "@/components/ui/navBar";
 import Image from "next/image";
 import Projects from "@/components/main_component/projects";
-
+import Skills from "@/components/data/skills_section";
+import { HoverCardFunc } from "@/components/ui/footer_logo";
 export default function Home() {
   return (
     <>
@@ -18,6 +19,8 @@ export default function Home() {
         {/* Main content here */}
         <HeroSection />
         <Projects />
+        <Skills />
+        <HoverCardFunc />
       </main>
       <div>
         {/* <Footer /> */}
@@ -30,4 +33,4 @@ export default function Home() {
 }
 
 // Color Adjustment are remaining 
-
+// Change the color theme of Hero Section into Projects Section
